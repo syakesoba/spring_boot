@@ -1,0 +1,21 @@
+version: '3' 
+
+services:
+  app:
+    image: openjdk:17
+    container_name: app
+    ports:
+      - 8080:8080
+    stdin_open: true
+    tty: true
+
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB=spring-boot'
+      - 'POSTGRES_PASSWORD=postgres'
+      - 'POSTGRES_USER=postgres'
+    ports:
+      - '5432'
+    stdin_open: true
+    tty: true
