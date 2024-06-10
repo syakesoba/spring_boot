@@ -1,4 +1,4 @@
-package com.example.app.controller;
+package com.example.app.user.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,7 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.app.service.UserService;
+import com.example.app.user.service.UserService;
 
 @Controller
 public class UserController {
