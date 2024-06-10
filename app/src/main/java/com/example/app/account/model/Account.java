@@ -1,4 +1,4 @@
-package com.example.app.user.model;
+package com.example.app.account.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class User {
+public class Account {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>アカウント覧ページ</title>
+</head>
+<body>
+    <h1>アカウント一覧</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>名前</th>
+                <th>年齢</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="account : ${accountList}">
+                <td th:text="${account.name}"></td>
+                <td th:text="${account.age}"></td>
+                <td>
+                    <!--<a th:href="@{/showFormForUpdate/{id}(id=${product.id})}">詳細</a>
+                    <a th:href="@{/deleteProduct/{id}(id=${product.id})}">削除</a>-->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
