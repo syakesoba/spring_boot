@@ -1,0 +1,20 @@
+{
+  "name": "app",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "syakesoba <soccer.akira6@icloud.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/syakesoba/spring_boot",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.7.16"
+  }
+}
