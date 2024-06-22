@@ -33,5 +33,9 @@ out/
 /nbdist/
 /.nb-gradle/
 
+### node.js ###
+node_modules/
+bower_components
+
 ### VS Code ###
 .vscode/
