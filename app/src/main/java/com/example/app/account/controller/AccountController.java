@@ -39,7 +39,7 @@ public class AccountController {
         // 指定されたidのアカウントを取得します。
         Optional<Account> account = accountService.getAccountById(Integer.valueOf(id));
         model.addAttribute("account", account);
-        return "account/accountList";
+        return "account/accountDetail";
     }
     
 }
