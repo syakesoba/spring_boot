@@ -35,9 +35,9 @@ public class AccountController {
     }
 
     @GetMapping("/detail")
-    public String detail(Model model, @RequestParam String id) {
+    public String detail(Model model, @RequestParam("id") Integer id) {
         // 指定されたidのアカウントを取得します。
-        Optional<Account> account = accountService.getAccountById(Integer.valueOf(id));
+        Account account = accountService.getAccountById(id).orElse(null);
         model.addAttribute("account", account);
         return "account/accountDetail";
     }
