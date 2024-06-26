@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <!-- <link th:href="@{/common/header.css}" rel="stylesheet"> -->
+    <link th:href="@{/common/header.css}" rel="stylesheet">
     <title>アカウント詳細ページ</title>
 </head>
 <body>
@@ -12,16 +12,11 @@
             <tr>
                 <th>名前</th>
                 <th>年齢</th>
-                <th>操作</th>
             </tr>
         </thead>
         <tbody>
             <td th:text="${account.name}"></td>
             <td th:text="${account.age}"></td>
-            <td>
-                <!--<a th:href="@{/showFormForUpdate/{id}(id=${product.id})}">詳細</a>
-                <a th:href="@{/deleteProduct/{id}(id=${product.id})}">削除</a>-->
-            </td>
         </tbody>
     </table>
 </body>
