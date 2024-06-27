@@ -20,7 +20,7 @@
                 <td th:text="${account.name}"></td>
                 <td th:text="${account.age}"></td>
                 <td>
-                    <a th:href="@{/detail/{id}(id=${account.id})}">詳細</a>
+                    <a th:href="@{/account/detail?id={id}(id=${account.id})}">詳細</a>
                     <!-- <a th:href="@{/deleteProduct/{id}(id=${product.id})}">削除</a> -->
                 </td>
             </tr>
