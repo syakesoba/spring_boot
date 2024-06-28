@@ -41,5 +41,12 @@ public class AccountController {
         model.addAttribute("account", account);
         return "account/accountDetail";
     }
+
+    @GetMapping("/createAccount")
+    public String createAccount(Model model) {
+        Account account = new Account();
+        model.addAttribute("account", account);
+        return "create";
+    }
     
 }
