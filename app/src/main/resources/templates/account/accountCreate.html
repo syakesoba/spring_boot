@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link th:href="@{/common/header.css}" rel="stylesheet">
+    <title>アカウント登録ページ</title>
+</head>
+<body>
+    <h1>アカウント登録ページ</h1>
+    <form action="#" th:action="@{/saveAccount}" th:object="${account}" method="post">
+        <label for="name">名前</label>
+        <input type="text" th:field="*{name}" id="name">
+        <label for="age">年齢</label>
+        <input type="text" th:field="*{age}" id="age">
+        <input type="submit" value="登録する">
+    </form>
+    <a href="/">一覧ページに戻る</a>
+</body>
+</html>
