@@ -19,21 +19,13 @@ import com.example.app.account.service.AccountService;
 @Controller
 @Scope("request")
 @RequestMapping("account")
-public class AccountController {
+public class AccountDetailController {
 
     private final AccountService accountService;
 
     @Autowired
-    public AccountController(AccountService accountService) {
+    public AccountDetailController(AccountService accountService) {
         this.accountService = accountService;
-    }
-
-    @GetMapping("/")
-    public String index(Model model) {
-        // 全アカウント取得します。
-        List<Account> accountList = accountService.getAllAccounts();
-        model.addAttribute("accountList", accountList);
-        return "account/accountList";
     }
 
     @GetMapping("/detail")
@@ -42,19 +34,6 @@ public class AccountController {
         Account account = accountService.getAccountById(id).orElse(null);
         model.addAttribute("account", account);
         return "account/accountDetail";
-    }
-
-    @GetMapping("/createAccount")
-    public String createAccount(Model model) {
-        Account account = new Account();
-        model.addAttribute("account", account);
-        return "create";
-    }
-
-    @PostMapping("/createAccount")
-    public String createAccount(@ModelAttribute("account") Account account) {
-        accountService.saveAccount(account);
-        return "redirect:/";
     }
     
 }
